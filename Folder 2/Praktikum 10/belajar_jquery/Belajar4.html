@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Belajar jQuery</title>
+<script src="jquery-3.5.1.js"></script>
+<script>
+   $(document).ready(function() {
+     $("#tombol").click(function() {
+         $(this).after('<p>Sedang Belajar jQuery di kelas Web Programming 2</p>');
+     });
+   });
+   </script>
+</head>
+<body>
+  <h1>Belajar jQuery di Web Programming 2</h1>
+  <button id="tombol">Klik Disini!</button>
+</body>
+</html>

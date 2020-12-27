@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Belajar jQuery Duniailkom</title>
+<script src="jquery-2.1.4.js"></script>
+<script>
+   $(document).ready(function() {
+  
+     $("#tombol_slide_up").click(function() {
+       $("#box").slideUp("slow");
+     })
+  
+     $("#tombol_slide_down").click(function() {
+       $("#box").slideDown("fast");
+     })
+  
+   });
+   </script>
+   <style>
+   #box {
+     width: 300px;
+     height: 80px;
+     background-color: pink;
+     border: 2px solid black;
+   }
+   </style>
+</head>
+<body>
+<h2>Belajar jQuery Duniailkom</h2>
+<button id="tombol_slide_up">SlideUp</button>
+<button id="tombol_slide_down">SlideDown</button>
+<br><br>
+<div id="box"></div>
+</body>
+</html>

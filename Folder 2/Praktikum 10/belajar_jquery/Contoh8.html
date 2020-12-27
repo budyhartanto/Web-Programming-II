@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Belajar jQuery WP2</title>
+<script src="jquery-3.5.1.js"></script>
+<script>
+   $(document).ready(function() {
+  
+     $("#tambah").click(function() {
+       $("#belajar").append("<li>Belajar jQuery di WP2</li>");
+     })
+  
+     $("#kosong").click(function() {
+       $("#belajar").empty();
+    })
+  
+     $("#hapus").click(function() {
+       $("#belajar").remove();
+     })
+  
+   });
+   </script>
+</head>
+<body>
+<button id="tambah">Tambah jQuery</button>
+<button id="kosong">Kosongkan</button>  
+<button id="hapus">Hapus Semua</button>  
+<ul id="belajar">
+   <li id="list_html">Belajar HTML</li>
+   <li id="list_css">Belajar CSS</li>
+   <li id="list_php">Belajar PHP</li>
+   <li id="list_js">Belajar JavaScript</li>
+   <li id="list_mysql">Belajar MySQL </li>
+</ul>
+</body>
+</html>

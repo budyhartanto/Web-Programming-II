@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 10 Nov 2020 pada 12.01
+-- Waktu pembuatan: 28 Des 2020 pada 00.24
 -- Versi server: 10.4.14-MariaDB
 -- Versi PHP: 7.4.11
 
@@ -20,6 +20,35 @@ SET time_zone = "+00:00";
 --
 -- Database: `write`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `buku`
+--
+
+CREATE TABLE `buku` (
+  `id` int(11) NOT NULL,
+  `judul` varchar(255) NOT NULL,
+  `pengarang` varchar(255) NOT NULL,
+  `penerbit` varchar(255) NOT NULL,
+  `tahun` bigint(20) NOT NULL,
+  `jumlah_buku` int(11) NOT NULL,
+  `jumlah_eksemplar` int(11) NOT NULL,
+  `kategori` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `buku`
+--
+
+INSERT INTO `buku` (`id`, `judul`, `pengarang`, `penerbit`, `tahun`, `jumlah_buku`, `jumlah_eksemplar`, `kategori`) VALUES
+(1, 'One Piece', 'Eiichiro oda', 'Shueisha', 2015, 123333, 1233333, 'Anime'),
+(2, 'Conan', 'Moyuko Kanba', 'Moyuka Kanba', 1980, 840, 800000, 'Anime'),
+(3, 'Boruto', 'Masashi Kishimoto', 'Shueisha', 2018, 918, 120000, 'Anime'),
+(4, 'Hunter X Hunter', 'Yoshihiro Togashi', 'Elex Media Komputindo', 2014, 3152, 500000, 'Anime'),
+(5, 'Dragon Ball', 'Akira Toriyama', 'Shueisha', 2004, 5586, 200000, 'Anime'),
+(26, 'Samurai X', 'Hajimoto', 'Shueisha', 2007, 100000, 100000, 'Anime');
 
 -- --------------------------------------------------------
 
@@ -98,9 +127,9 @@ CREATE TABLE `tabel_berita` (
 --
 
 INSERT INTO `tabel_berita` (`id_berita`, `judul`, `isi`, `imgberita`, `penulis`, `tanggal`) VALUES
-(7, 'Luffy Melawan Kaido', '<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>\r\n', '642aa2ee880ff4eba2bc6a3424f41b48.jpg', 'UtsWp', '2020-10-28'),
-(8, 'Di Tangan Yang Lain', '<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>\r\n', 'f93e940b2430a0c37ac5642645bbba93.jpg', 'UtsWp', '2020-10-28'),
-(9, 'Naruto Dan Onepiece', '<p>Membaca manga di era modern ini bisa dilakukan tidak hanya melalui bentuk fisik bukunya saja, tapi juga melalui perangkat mobile yang digunakan sehari-hari. Diantara banyak perangkat yang memungkinkan orang membaca dengan nyaman dan mudah adalah iPad dan tablet Android yang memiliki ukuran layar lebih besar. Tapi beberapa orang juga menggunakan iPhone mereka untuk melakukan hal ini.</p>\r\n\r\n<p>Bagi para pengguna perangkat iOS dan Android yang suka membaca manga namun masih bingung aplikasi apa saja yang menyediakan layanan ini, <em>Tech In Asia</em> merangkum beberapa aplikasi yang dapat menampung kegiatan mengasyikkan ini.</p>\r\n', '1aa092e01fc7224aec13b8da1577ba71.jpg', 'Write', '2020-11-05');
+(7, 'Luffy Melawan Kaido', '<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>\r\n', '29682dfa5b38ffd8bed964087170c3c4.jpg', 'Write', '2020-10-28'),
+(8, 'Di Tangan Yang Lain', '<p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.</p>\r\n', 'd27cbac42d9f208ce95bf40d1e6b3bc4.jpg', 'Write', '2020-10-28'),
+(9, 'Naruto Dan Onepiece', '<p>Membaca manga di era modern ini bisa dilakukan tidak hanya melalui bentuk fisik bukunya saja, tapi juga melalui perangkat mobile yang digunakan sehari-hari. Diantara banyak perangkat yang memungkinkan orang membaca dengan nyaman dan mudah adalah iPad dan tablet Android yang memiliki ukuran layar lebih besar. Tapi beberapa orang juga menggunakan iPhone mereka untuk melakukan hal ini.</p>\r\n\r\n<p>Bagi para pengguna perangkat iOS dan Android yang suka membaca manga namun masih bingung aplikasi apa saja yang menyediakan layanan ini, <em>Tech In Asia</em> merangkum beberapa aplikasi yang dapat menampung kegiatan mengasyikkan ini.</p>\r\n', 'a76c3513876b981f65ad5dc2e6e86896.jpg', 'Write', '2020-11-05');
 
 -- --------------------------------------------------------
 
@@ -127,7 +156,7 @@ CREATE TABLE `tabel_config` (
 --
 
 INSERT INTO `tabel_config` (`id_config`, `webname`, `imgheader`, `alamat`, `email`, `telpon`, `facebook`, `instagram`, `twitter`, `youtube`, `copyright`) VALUES
-(1, 'Write', '466fe11e85a5cb8d25d10d98f3373844.jpg', 'Tegal, Jawa Tengah, Indonesia', 'tamustahir@gmail.com', '0876-8768-0977', '#', '#', '#', '#', 'Write');
+(1, 'Write', '466fe11e85a5cb8d25d10d98f3373844.jpg', 'Tegal, Jawa Tengah, Indonesia', 'tanto@gmail.com', '0851-5743-3567', '#', '#', '#', '#', 'Write');
 
 -- --------------------------------------------------------
 
@@ -255,6 +284,12 @@ INSERT INTO `tabel_user` (`id_user`, `id_profil`, `username`, `password`, `nama_
 --
 
 --
+-- Indeks untuk tabel `buku`
+--
+ALTER TABLE `buku`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `tabel_about`
 --
 ALTER TABLE `tabel_about`
@@ -311,6 +346,12 @@ ALTER TABLE `tabel_user`
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
 --
+
+--
+-- AUTO_INCREMENT untuk tabel `buku`
+--
+ALTER TABLE `buku`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT untuk tabel `tabel_about`

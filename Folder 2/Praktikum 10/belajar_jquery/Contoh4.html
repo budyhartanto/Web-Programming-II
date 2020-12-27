@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Belajar jQuery WP2</title>
+<script src="jquery-3.5.1.js"></script>
+<script>
+   $(document).ready(function() {
+  
+     $("#tombol").click(function() {
+       $("#paragraf1").text("<b>#jQuery</b> is Amazing...");
+       $("#paragraf2").html("<b>#jQuery</b> is Amazing...");
+     })
+  
+   });
+   </script>
+</head>
+<body>
+<p id="paragraf1">
+   Sedang belajar jQuery di WP2...
+</p>
+<p id="paragraf2">
+   Sedang belajar jQuery di WP2...
+</p>
+<button id="tombol">Change!</button>
+</body>
+</html>

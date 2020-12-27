@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Belajar jQuery WP2</title>
+<script src="jquery-3.5.1.js"></script>
+<script>
+   $(document).ready(function() {
+  
+     $("#tombol").click(function() {
+       var nilai = $("#kotak_isian").val();
+       $("#target").html(nilai);
+     })
+  
+   });
+   </script>
+</head>
+<body>
+Input Text: <input type="text" id="kotak_isian">
+<button id="tombol">Salin!</button>
+<p id="target">placeholder...</p>
+</body>
+</html>

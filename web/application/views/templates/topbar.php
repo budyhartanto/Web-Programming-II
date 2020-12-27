@@ -31,7 +31,11 @@
                     </a>
                     <!-- Dropdown - User Information -->
                     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                        
+                        <a class="dropdown-item" href="<?= base_url('dashboard/profil/' . $data->id_user); ?>">
+                            <i class="fas fa-id-card-alt fa-sm fa-fw mr-2"></i>
+                            My Profile
+            
+                        </a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2"></i>

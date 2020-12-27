@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Belajar jQuery WP2</title>
+<script src="jquery-3.5.1.js"></script>
+<script>
+   $(document).ready(function() {
+  
+     $("#tombol").click(function() {
+       var nilai = $("#nama").val();
+       alert(nilai);
+     })
+  
+   });
+   </script>
+</head>
+<body>
+Nama: <input type="text" id="nama" value="Web Programming 2...">
+<button id="tombol">Ambil Nilai</button>
+</body>
+</html>
